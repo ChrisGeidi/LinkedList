@@ -18,15 +18,19 @@
 
 using namespace std;
 
-linkedList::linkedList()
+linkedList::linkedList() : linkedList("");
+{
+}
+
+linkedList::linkedList(string s)
 {
     listElement element("");
 
-    setActualElement(0);
-    setStartElement(0);
+    setActiveElement(&element);
+    setStartElement(&element);
 }
 
-linkedList::linkedList( linkedList )
+linkedList::linkedList(linkedList liste)
 {
 }
 
@@ -34,11 +38,11 @@ linkedList::append( string s )
 {
 }
 
-linkedList::insert( int i, string s )
+linkedList::insertElement( int i, string s )
 {
 }
 
-linkedList::sort()
+linkedList::sortList()
 {
 }
 
@@ -52,20 +56,24 @@ ostream& operator<< ( ostream& os, const linkedList& liste )
 {
 }
 
-linkedList::setActualElement( listElement* le )
+void linkedList::setActiveElement( listElement* pListElement )
 {
+    active = pListElement;
 }
 
-linkedList::setStartElement( listElement* le )
+void linkedList::setStartElement( listElement* pListElement )
 {
+    start = pListElement;
 }
 
-linkedList::getActualElement()
+listElement* linkedList::getActiveElement()
 {
+    return active;
 }
 
-linkedList::getStartElement()
+listElement* linkedList::getStartElement()
 {
+    return start;
 }
 
 /////////////////// End of File <linkedList.cpp> //////////////////////////////
