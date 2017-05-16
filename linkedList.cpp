@@ -18,7 +18,7 @@
 
 using namespace std;
 
-linkedList::linkedList() : linkedList("");
+linkedList::linkedList() : linkedList("")
 {
 }
 
