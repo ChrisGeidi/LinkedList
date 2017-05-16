@@ -21,6 +21,7 @@
 class listElement
 {
     std::string content;
+    listElement* ptrNextElement;
 
 public:
     listElement();
@@ -30,6 +31,7 @@ public:
     friend std::ostream& operator<< (std::ostream& os,  listElement& element);
     void setContent(std::string);
     std::string getContent();
+    void setNextElement(listElement*);
 };
 
 #endif // LISTELEMENT_H

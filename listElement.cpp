@@ -16,6 +16,16 @@
 
 using namespace std;
 
+listElement::listElement() : listElement("")
+{
+}
+
+listElement::listElement(string strContent)
+{
+    setContent(strContent);
+    setNextElement(0);
+}
+
 string listElement::getContent()
 {
     return content;
@@ -24,6 +34,11 @@ string listElement::getContent()
 void listElement::setContent(string newContent)
 {
     content = newContent;
+}
+
+void listElement::setNextElement(listElement* pNextElement)
+{
+    ptrNextElement = pNextElement;
 }
 
 void listElement::swapContent(listElement element)

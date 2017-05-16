@@ -22,9 +22,9 @@ linkedList::linkedList() : linkedList("");
 {
 }
 
-linkedList::linkedList(string s)
+linkedList::linkedList(string strContent)
 {
-    listElement element("");
+    listElement element(strContent);
 
     setActiveElement(&element);
     setStartElement(&element);
@@ -34,8 +34,14 @@ linkedList::linkedList(linkedList liste)
 {
 }
 
-linkedList::append( string s )
+linkedList::append(string strContent)
 {
+    listElement* ptrNewElement = new listElement;
+    listElement* ptrLastElement = getActiveElement();
+
+    ptrNewElement->setContent(strContent);
+    ptrLastElement->setNextElement(ptrNewElement);
+    setActiveElement(ptrNewElement);
 }
 
 linkedList::insertElement( int i, string s )
