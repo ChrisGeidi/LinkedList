@@ -9,7 +9,10 @@ using namespace std;
 
 linkedList::linkedList()
 {
-    new listElement
+    element = new listElement("")
+
+    setActualElement(0);
+    setStartElement();
 }
 
 linkedList::linkedList( linkedList )
@@ -35,5 +38,21 @@ linkedList::deleteElement( int i )
 linkedList::deleteElement( string s )
 
 ostream& operator<< ( ostream& os, const rational& ratBruch )
+{
+}
+
+linkedList::setActualElement( listElement* le )
+{
+}
+
+linkedList::setStartElement( listElement* le )
+{
+}
+
+linkedList::getActualElement()
+{
+}
+
+linkedList::getStartElement()
 {
 }

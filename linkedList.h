@@ -31,9 +31,9 @@ private:
 
 public:
     /* Konstruktoren */
-    linkedList();               //initialize LinkedList
-    linkedList("");             //initialize LinkedList with content
-    linkedList(linkedList);     //copyConstructor for LinkedList
+    linkedList(  );               //initialize LinkedList
+    linkedList( string );             //initialize LinkedList with content
+    linkedList( linkedList );     //copyConstructor for LinkedList
     /* Schnittstellenfkt */
     void sort(  );              // sortierung asc
     void append( string );      // element an das ende der liste anhängen
