@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// File: listElement.h
+// File: listElement.cpp
 //
 // Ingenieurorientierte Programmierung
 // Dr. Alexander Kling
@@ -13,6 +13,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "listElement.h"
+
 using namespace std;
 
 string listElement::getContent()
@@ -22,23 +23,26 @@ string listElement::getContent()
 
 void listElement::setContent(string newContent)
 {
-    content=newContent;
+    content = newContent;
 }
 
 void listElement::swapContent(listElement element)
 {
     string tempContent=getContent();
+
     setContent(element.getContent());
     element.setContent(tempContent);
 
 }
-ostream& operator<< (ostream& os,  listElement& element)
+ostream& operator<< (ostream& os, listElement& element)
 {
-    os<< element.getContent();
+    os << element.getContent();
 
     return os;
 }
-void listElement::operator=(listElement element)
+void listElement::operator= (listElement element)
 {
-    content=element.getContent();
+    content = element.getContent();
 }
+
+//////////////////// End of File <listElement.cpp> ////////////////////////////

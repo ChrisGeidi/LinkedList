@@ -16,7 +16,7 @@
 #define LINKEDLIST_H
 
 #include <iostream>
-using namespace std;
+
 class linkedList
 {
 private:
@@ -32,19 +32,19 @@ private:
 public:
     /* Konstruktoren */
     linkedList(  );               //initialize LinkedList
-    linkedList( string );             //initialize LinkedList with content
+    linkedList( std::string );             //initialize LinkedList with content
     linkedList( linkedList );     //copyConstructor for LinkedList
     /* Schnittstellenfkt */
     void sort(  );              // sortierung asc
-    void append( string );      // element an das ende der liste anhängen
-    void insert( int, string ); // element an einer bestimmten position einfügen
-    void deleteElement( int )   // soll ein element an einer stelle löschen
-    void deleteElement( string )// soll ein element mit dem Content löschen
+    void append( std::string );      // element an das ende der liste anhängen
+    void insert( int, std::string ); // element an einer bestimmten position einfügen
+    void deleteElement( int );   // soll ein element an einer stelle löschen
+    void deleteElement( std::string );// soll ein element mit dem Content löschen
     /* Überladungsfkt */
-    friend ostream& operator<< (ostream& os, const rational& ratBruch);
+    friend std::ostream& operator<< (std::ostream& os, const linkedList& liste);
 };
 
 #endif // linkedList_H
 
-/////////////////// End of File <linkedList.h> //////////////////////////////////
+/////////////////// End of File <linkedList.h> ////////////////////////////////
 

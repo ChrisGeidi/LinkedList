@@ -1,5 +1,16 @@
-#ifndef LINKEDLIST_CPP
-#define LINKEDLIST_CPP
+///////////////////////////////////////////////////////////////////////////////
+//
+// File: linkedList.cpp
+//
+// Ingenieurorientierte Programmierung
+// Dr. Alexander Kling
+//
+// Carsten Bevermann
+// Christoph Geitner
+// Jens Reimer
+// Marc Töpker
+//
+///////////////////////////////////////////////////////////////////////////////
 
 #include "listElement.h"
 #include "linkedList.h"
@@ -9,10 +20,10 @@ using namespace std;
 
 linkedList::linkedList()
 {
-    element = new listElement("")
+    listElement element("");
 
     setActualElement(0);
-    setStartElement();
+    setStartElement(0);
 }
 
 linkedList::linkedList( linkedList )
@@ -37,7 +48,7 @@ linkedList::deleteElement( int i )
 
 linkedList::deleteElement( string s )
 
-ostream& operator<< ( ostream& os, const rational& ratBruch )
+ostream& operator<< ( ostream& os, const linkedList& liste )
 {
 }
 
@@ -56,3 +67,5 @@ linkedList::getActualElement()
 linkedList::getStartElement()
 {
 }
+
+/////////////////// End of File <linkedList.cpp> //////////////////////////////
