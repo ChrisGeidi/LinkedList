@@ -30,7 +30,7 @@ linkedList::linkedList(string strContent)
     setStartElement(&element);
 }
 
-linkedList::linkedList(linkedList liste)
+linkedList::linkedList(linkedList* pListe)
 {
 }
 
@@ -44,12 +44,29 @@ linkedList::append(string strContent)
     setActiveElement(ptrNewElement);
 }
 
-linkedList::insertElement( int i, string s )
+linkedList::insertElement(int i, string s )
 {
+    // Schleife um Adresse der Elementnummer zu bekommen
+
 }
 
 linkedList::sortList()
 {
+    // Bubblesort-Algorithmus
+    int amountOfElements = getAmountOfElements();
+    for(int i = 1; i <= amountOfElements; i++)
+    {
+        for(int j = 1; j <= amountOfElements; j++)
+        {
+            if(int(getAddressOfElementsNumber(j).getContent()[0])
+               > int(getAddressOfElementsNumber(j+1).getContent()[0])
+            {
+                string strTemp = getAddressOfElementsNumber(j).getContent();
+                getAddressOfElementsNumber(j).setContent(getAddressOfElementsNumber(j+1).getContent());
+                getAddressOfElementsNumber(j+1).setContent(strTemp);
+            }//endif
+        }//endfor
+    }//endfor
 }
 
 linkedList::deleteElement( int i )
