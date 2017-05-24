@@ -17,20 +17,26 @@
 #include <iostream>
 
 using namespace std;
-string emptyString = "";
+string emptyString = "Test";
 linkedList::linkedList() : linkedList(emptyString)
 {
-    cout << "Default-Konstruktor wurde aufgerufen!" << endl;
+    cout << "Default-Konstruktor" << endl;
 }
 
 linkedList::linkedList(string strContent)
 {
-    listElement element(strContent);
+    cout << "Custom-Konstruktor: "<< strContent << endl;
+    listElement* ptrNewElement = new listElement;
+    ptrNewElement->setContent(strContent);
 
-    setActiveElement(&element);
-    setStartElement(&element);
+    setStartElement(ptrNewElement);
+    setActiveElement(ptrNewElement);
 
-    cout << "Custom-Konstruktor string wurde aufgerufen!" << endl;
+    cout  << "StartElement: " << getStartElement() << endl;
+    cout  << "ContentStart: " << getStartElement()->getContent() << endl;
+    cout  << "aktivesElement: " << getActiveElement() << endl;
+    cout  << "ContentActive: " << getActiveElement()->getContent() << endl;
+    cout << endl;
 }
 
 //linkedList::linkedList(linkedList& pListe)
@@ -44,14 +50,22 @@ linkedList::~linkedList()
 
 void linkedList::append(string strContent)
 {
+    cout << "appendStart: " << strContent << endl;
+    // Neues Listen element erzeugen
     listElement* ptrNewElement = new listElement;
     listElement* ptrLastElement = getActiveElement();
+
+    //
+    cout << "ptrLastElement: " << ptrLastElement << endl;
+    cout << "Content: " << ptrLastElement->getContent() << endl;
 
     ptrNewElement->setContent(strContent);
     ptrLastElement->setNextElement(ptrNewElement);
     setActiveElement(ptrNewElement);
+    cout << "ptrNewElement: " << ptrNewElement << endl;
+    cout << "Content: " << ptrNewElement->getContent() << endl;
 
-    cout << "append wurde aufgerufen!" << endl;
+    cout << "appendEnde" << endl << endl;
 }
 
 void linkedList::insertElement(int i, string s )
@@ -90,13 +104,17 @@ void linkedList::deleteElement( string s )
 
 ostream& operator<< ( ostream& os, linkedList& liste )
 {
-    cout << "Beginn von << wurde aufgerufen!" << endl;
-    int i = 0;
+    int i=0;
+    cout << "Ausgabe start: " << endl;
+    // Erstes listElement holen
     listElement* element = liste.getStartElement();
-    //while(element->getNextElement() != 0)
-    while(i == 0)
+
+    // ELemente der reihe nach ausgaben
+    while(element != 0)
     {
-        os << element->getContent();
+        // Ausgabe des Aktuellen Elements
+        os << i << ": \t" << element->getContent() << endl;
+        // nächstes Element holen/setzen
         element = element->getNextElement();
         i++;
     }

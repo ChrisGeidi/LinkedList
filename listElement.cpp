@@ -15,7 +15,6 @@
 #include "listElement.h"
 
 using namespace std;
-
 listElement::listElement() : listElement("")
 {
 }

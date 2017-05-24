@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1495644040 source:c:\users\marc töpker\netcase\01-studium\semester_4\ingenieurorientierte_programmierung\02_mitschriften\aufgabe_linkedlist\linkedlist\linkedlist.cpp
+	"listElement.h"
+	"linkedList.h"
+	<iostream>
+
+1495638675 c:\users\marc töpker\netcase\01-studium\semester_4\ingenieurorientierte_programmierung\02_mitschriften\aufgabe_linkedlist\linkedlist\listelement.h
+	<string>
+	<iostream>
+
+1495638675 c:\users\marc töpker\netcase\01-studium\semester_4\ingenieurorientierte_programmierung\02_mitschriften\aufgabe_linkedlist\linkedlist\linkedlist.h
+	<iostream>
+	"listElement.h"
+
+1495643046 source:c:\users\marc töpker\netcase\01-studium\semester_4\ingenieurorientierte_programmierung\02_mitschriften\aufgabe_linkedlist\linkedlist\listelement.cpp
+	"listElement.h"
+
+1495644085 source:c:\users\marc töpker\netcase\01-studium\semester_4\ingenieurorientierte_programmierung\02_mitschriften\aufgabe_linkedlist\linkedlist\testapplication.cpp
+	"linkedList.h"
+
