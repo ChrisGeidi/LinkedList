@@ -17,9 +17,10 @@
 #include <iostream>
 
 using namespace std;
-
-linkedList::linkedList() : linkedList("")
+string emptyString = "";
+linkedList::linkedList() : linkedList(emptyString)
 {
+    cout << "Default-Konstruktor wurde aufgerufen!" << endl;
 }
 
 linkedList::linkedList(string strContent)
@@ -28,13 +29,20 @@ linkedList::linkedList(string strContent)
 
     setActiveElement(&element);
     setStartElement(&element);
+
+    cout << "Custom-Konstruktor string wurde aufgerufen!" << endl;
 }
 
-linkedList::linkedList(linkedList* pListe)
+//linkedList::linkedList(linkedList& pListe)
+//{
+//}
+
+linkedList::~linkedList()
 {
+    cout << "Destruktor wurde aufgerufen!" << endl;
 }
 
-linkedList::append(string strContent)
+void linkedList::append(string strContent)
 {
     listElement* ptrNewElement = new listElement;
     listElement* ptrLastElement = getActiveElement();
@@ -42,15 +50,17 @@ linkedList::append(string strContent)
     ptrNewElement->setContent(strContent);
     ptrLastElement->setNextElement(ptrNewElement);
     setActiveElement(ptrNewElement);
+
+    cout << "append wurde aufgerufen!" << endl;
 }
 
-linkedList::insertElement(int i, string s )
+void linkedList::insertElement(int i, string s )
 {
     // Schleife um Adresse der Elementnummer zu bekommen
 
 }
 
-linkedList::sortList()
+/*void linkedList::sortList()
 {
     // Bubblesort-Algorithmus
     int amountOfElements = getAmountOfElements();
@@ -67,16 +77,31 @@ linkedList::sortList()
             }//endif
         }//endfor
     }//endfor
-}
+}*/
 
-linkedList::deleteElement( int i )
+void linkedList::deleteElement(int i)
 {
 }
 
-linkedList::deleteElement( string s )
-
-ostream& operator<< ( ostream& os, const linkedList& liste )
+void linkedList::deleteElement( string s )
 {
+
+}
+
+ostream& operator<< ( ostream& os, linkedList& liste )
+{
+    cout << "Beginn von << wurde aufgerufen!" << endl;
+    int i = 0;
+    listElement* element = liste.getStartElement();
+    //while(element->getNextElement() != 0)
+    while(i == 0)
+    {
+        os << element->getContent();
+        element = element->getNextElement();
+        i++;
+    }
+
+    return os;
 }
 
 void linkedList::setActiveElement( listElement* pListElement )

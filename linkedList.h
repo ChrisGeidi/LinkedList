@@ -16,11 +16,12 @@
 #define LINKEDLIST_H
 
 #include <iostream>
+#include "listElement.h"
 
 class linkedList
 {
 private:
-    int amountOfElements;
+    //int amountOfElements;
     listElement* start;
     listElement* active;
 
@@ -28,16 +29,15 @@ private:
     void setStartElement( listElement* );
     void setActiveElement ( listElement* );
 
-    /* get functions */
-    listElement getStartElement (  );
-    listElement getActiveElement (  );
+
+
 
 
 public:
     /* Konstruktoren */
     linkedList(  );                         //initialize LinkedList
     linkedList( std::string );              //initialize LinkedList with content
-    linkedList( linkedList& );               //copyConstructor for LinkedList
+    //linkedList( linkedList& );               //copyConstructor for LinkedList
     /* Destruktor */
     ~linkedList();
     /* Schnittstellenfkt */
@@ -46,10 +46,13 @@ public:
     void insertElement( int, std::string ); // element an einer bestimmten position einfügen
     void deleteElement( int );              // soll ein element an einer stelle löschen
     void deleteElement( std::string );      // soll ein element mit dem Content löschen
-    int getAmountOfElements() const;
-    listElement* getAddressOfElementsNumber(int);   // gibt Adresse eines numerierten Elementes zurück
+    /* get functions */
+    listElement* getStartElement (  );
+    listElement* getActiveElement (  );
+    //int getAmountOfElements() const;
+    //listElement* getAddressOfElementsNumber(int);   // gibt Adresse eines numerierten Elementes zurück
     /* Überladungsfkt */
-    friend std::ostream& operator<< (std::ostream& os, const linkedList& liste);
+    friend std::ostream& operator<< (std::ostream& os,  linkedList& liste);
 };
 
 #endif // linkedList_H

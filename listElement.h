@@ -21,7 +21,6 @@
 class listElement
 {
     std::string content;
-    unsigned int number;
     listElement* ptrNextElement;
 
 public:
@@ -33,7 +32,8 @@ public:
     void setContent(std::string);
     std::string getContent();
     void setNextElement(listElement*);
-    listElement* getAddressOfNumber(unsigned int);
+    listElement* getNextElement();
+    //listElement* getAddressOfNumber(unsigned int);
 };
 
 #endif // LISTELEMENT_H

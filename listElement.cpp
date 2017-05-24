@@ -41,6 +41,11 @@ void listElement::setNextElement(listElement* pNextElement)
     ptrNextElement = pNextElement;
 }
 
+listElement* listElement::getNextElement()
+{
+    return ptrNextElement;
+}
+
 void listElement::swapContent(listElement element)
 {
     string tempContent=getContent();
@@ -49,6 +54,7 @@ void listElement::swapContent(listElement element)
     element.setContent(tempContent);
 
 }
+
 ostream& operator<< (ostream& os, listElement& element)
 {
     os << element.getContent();

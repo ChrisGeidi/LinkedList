@@ -1,1 +1,5 @@
 *.o
+LinkedList/LinkedList.cbp
+LinkedList/LinkedList.layout
+*.exe
+LinkedList/LinkedList.depend
