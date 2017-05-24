@@ -32,7 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="linkedList.cpp" />
+		<Unit filename="linkedList.h" />
+		<Unit filename="listElement.cpp" />
+		<Unit filename="listElement.h" />
+		<Unit filename="testApplication.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -12,46 +12,20 @@ int main()
     myList.append(test);
     test = "Marc";
     myList.append(test);
-    test = "Rainer";
+    test = "Töpker";
     myList.append(test);
-    test = "Rainer";
+    test = "Christoph";
     myList.append(test);
-    test = "Rainer";
+    test = "Geitner";
     myList.append(test);
-    test = "Rainer";
+    test = "Jens";
     myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
-    test = "Rainer";
-    myList.append(test);
+    test = "Reimer";
+
+
+
+
+
 
 
 
