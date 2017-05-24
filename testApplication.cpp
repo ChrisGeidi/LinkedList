@@ -8,8 +8,9 @@ int main()
     string test = "Casten";
     linkedList myList(test);
 
+    test = "Bevermann";
 
-    //myList.append(test);
+    myList.append(test);
 
     cout << myList << endl;
 
