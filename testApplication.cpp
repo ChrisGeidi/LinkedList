@@ -5,31 +5,20 @@ using namespace std;
 
 int main()
 {
-    string test = "Casten";
-    //linkedList myList;
+    string test = "Carsten";
     linkedList myList(test);
-    test = "Bevermann";
-    myList.append(test);
     test = "Marc";
-    myList.append(test);
-    test = "Töpker";
     myList.append(test);
     test = "Christoph";
     myList.append(test);
-    test = "Geitner";
-    myList.append(test);
     test = "Jens";
     myList.append(test);
-    test = "Reimer";
-
-
-
-
-
-
-
-
+    test = "##############";
+    myList.insertElement(1, test);
     cout << myList << endl;
-
+    myList.deleteElement(1);
+    cout << myList << endl;
+    myList.deleteElement("Marc");
+    cout << myList << endl;
     return 0;
 }
