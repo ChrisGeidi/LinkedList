@@ -217,8 +217,8 @@ ostream& operator<< ( ostream& os, linkedList& liste )
 
     return os;
 }
-/*
-int linkedList::getAmountOfElements(  )const
+
+int linkedList::getAmountOfElements(  )
 {
     int i=0;
     listElement* element = getStartElement();
@@ -229,7 +229,7 @@ int linkedList::getAmountOfElements(  )const
     }
     return i;
 }
-*/
+
 void linkedList::setActiveElement( listElement* pListElement )
 {
     active = pListElement;

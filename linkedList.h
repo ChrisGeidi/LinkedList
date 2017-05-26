@@ -49,7 +49,7 @@ public:
     /* get functions */
     listElement* getStartElement (  );
     listElement* getActiveElement (  );
-    int getAmountOfElements() const;
+    int getAmountOfElements();              //Anzahl der Elemente in der Liste ausgeben
     //listElement* getAddressOfElementsNumber(int);   // gibt Adresse eines numerierten Elementes zurück
     /* Überladungsfkt */
     friend std::ostream& operator<< (std::ostream& os,  linkedList& liste);
