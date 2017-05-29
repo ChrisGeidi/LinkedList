@@ -45,6 +45,9 @@ int main()
 
         switch(i)
         {
+        case 0:
+            cout<<"EXIT"<<endl;
+            break;
         case 1:
             cout<<"1: Beliebige Anzahl von Elementen anhaengen"<<endl;
             cout<<"Abbruch mit: !"<<endl<<endl;
