@@ -40,6 +40,7 @@ linkedList::linkedList(string strContent)
     //cout << endl;
 }
 
+// TODO (C.Geitner#1#): Kopierkonstruktor implementieren
 //linkedList::linkedList(linkedList& pListe)
 //{
 //}
@@ -131,6 +132,7 @@ void linkedList::insertElement(int i, string s )
     }
 }
 
+// TODO (C.Geitner#1#): Lower- / Uppercase ignorieren
 void linkedList::sortList()
 {
     // Bubblesort-Algorithmus

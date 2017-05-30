@@ -12,6 +12,8 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+// TODO (C.Geitner#1#): Umwandlung des gesamten Projektes in template-Klassen
+
 #ifndef LISTELEMENT_H
 #define LISTELEMENT_H
 

@@ -1,4 +1,16 @@
-
+///////////////////////////////////////////////////////////////////////////////
+//
+// File: testApplication.cpp
+//
+// Ingenieurorientierte Programmierung
+// Dr. Alexander Kling
+//
+// Carsten Bevermann
+// Christoph Geitner
+// Jens Reimer
+// Marc Töpker
+//
+///////////////////////////////////////////////////////////////////////////////
 #include "linkedList.h"
 
 using namespace std;
@@ -66,6 +78,7 @@ int main()
         case 2:
             cout<<"2: Element an beliebiger Stelle einfuegen"<<endl;
             cout<<"Name: ";
+// TODO (C.Geitner#1#): Alternative Einlesemethode implementieren
             cin>>content;
             cout<<"Position: ";
             cin>>position;
@@ -122,3 +135,5 @@ int main()
     cout << myList << endl;
     return 0;*/
 }
+
+////////////////// End of File <testApplication.cpp> //////////////////////////
