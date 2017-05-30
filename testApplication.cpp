@@ -56,7 +56,7 @@ int main()
                     cout<<"Name: ";
                     cin>>content;
                     if(content!="!")
-                    myList.append(content);
+                        myList.append(content);
                 }
                 while(content!="!");
 

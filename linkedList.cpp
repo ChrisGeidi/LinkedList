@@ -17,6 +17,7 @@
 #include <iostream>
 
 using namespace std;
+// TODO (C.Geitner#1#): emptyString empty machen
 string emptyString = "Test";
 linkedList::linkedList() : linkedList(emptyString)
 {
@@ -62,12 +63,25 @@ linkedList::~linkedList()
 
 void linkedList::append(string strContent)
 {
-    //cout << "appendStart: " << strContent << endl;
-    // Neues Listen element erzeugen
-    listElement* ptrNewElement = new listElement;
-    listElement* ptrLastElement = getActiveElement();
-    //cout << "ptrLastElement: " << ptrLastElement << endl;
-    //cout << "Content: " << ptrLastElement->getContent() << endl;
+    listElement* ptrNewElement = NULL;
+    listElement* ptrLastElement = NULL;
+
+    // Pruefen, ob erstes Element leeren String beinhaltet
+    // (Wird bei Erstellung der Liste durch Konstruktor erzeugt)
+    if(getActiveElement()->getContent() == "")
+    {
+        ptrNewElement = getActiveElement();
+        ptrLastElement = getActiveElement();
+    }
+    else
+    {
+        //cout << "appendStart: " << strContent << endl;
+        // Neues Listen element erzeugen
+        ptrNewElement = new listElement;
+        ptrLastElement = getActiveElement();
+        //cout << "ptrLastElement: " << ptrLastElement << endl;
+        //cout << "Content: " << ptrLastElement->getContent() << endl;
+    }
 
     ptrNewElement->setContent(strContent);
     ptrLastElement->setNextElement(ptrNewElement);
