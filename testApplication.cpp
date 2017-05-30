@@ -40,7 +40,7 @@ int main()
     cout << "*   0: Beenden des Programmes!                         *" << endl;
     cout << "********************************************************" << endl<<endl;
 
-    cout <<"Auswahl: "<<endl;
+    cout << "Auswahl: ";
     cin>>i;
 
         switch(i)
@@ -54,7 +54,8 @@ int main()
                 do
                 {
                     cout<<"Name: ";
-                    cin>>content;
+                    //cin >> content;
+                    getline(cin, content);
                     if(content!="!")
                         myList.append(content);
                 }
