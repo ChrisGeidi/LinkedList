@@ -27,7 +27,7 @@ public:
     listElement();
     listElement(std::string);
     void operator= (listElement);
-    void swapContent (listElement);
+    void swapContent (listElement*);
     friend std::ostream& operator<< (std::ostream& os,  listElement& element);
     void setContent(std::string);
     std::string getContent();

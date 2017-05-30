@@ -84,6 +84,8 @@ int main()
             break;
         case 5:
             cout<<"5: Alphabetische Sortierung durchfuehren"<<endl;
+            myList.sortList();
+            cout << "Liste wurde sortiert!" << endl;
             break;
         case 6:
             cout<<"6: Ausgabe der Liste"<<endl<<endl;

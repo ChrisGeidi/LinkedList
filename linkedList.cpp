@@ -116,26 +116,47 @@ void linkedList::insertElement(int i, string s )
         lastElement->setNextElement(newElement);
     }
 }
-/*
+
 void linkedList::sortList()
 {
     // Bubblesort-Algorithmus
     int amountOfElements = getAmountOfElements();
     for(int i = 1; i <= amountOfElements; i++)
     {
-        for(int j = 1; j <= amountOfElements; j++)
+        // Erstes listElement holen
+        listElement* element1 = getStartElement();
+        // Zweites listElement holen
+        listElement* element2 = element1->getNextElement();
+
+        // Elemente auf Reihenfolge pruefen
+        while(element2 != 0)
         {
-            if(int(getAddressOfElementsNumber(j).getContent()[0])
-               > int(getAddressOfElementsNumber(j+1).getContent()[0])
+            int j = 0;
+            string strContent1 = element1->getContent();
+            string strContent2 = element2->getContent();
+
+            // Den naechsten Buchstaben pruefen, falls bei beiden strings
+            // identisch
+            while(strContent1[j] == strContent2[j])
             {
-                string strTemp = getAddressOfElementsNumber(j).getContent();
-                getAddressOfElementsNumber(j).setContent(getAddressOfElementsNumber(j+1).getContent());
-                getAddressOfElementsNumber(j+1).setContent(strTemp);
-            }//endif
-        }//endfor
+                j++;
+            }
+
+            // Strings der Elemente vertauschen, falls ASCII-Wert der
+            // entsprechenden Stelle des ersten Elementes groeßer als der
+            // des zweiten Elementes ist
+            if(int(strContent1[j]) > int(strContent2[j]))
+            {
+                element1->swapContent(element2);
+            }
+
+            // Mit den folgenden Elementen fortfahren
+            element1 = element2;
+            element2 = element1->getNextElement();
+        }//endwhile
     }//endfor
 }
-*/
+
 void linkedList::deleteElement(int i)
 {
     int j=0;
