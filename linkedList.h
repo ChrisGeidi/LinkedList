@@ -17,6 +17,8 @@
 
 #include <iostream>
 #include "listElement.h"
+#include <stdio.h>
+
 
 class linkedList
 {

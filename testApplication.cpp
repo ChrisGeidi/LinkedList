@@ -12,7 +12,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 #include "linkedList.h"
-#include "stdio.h"
+
 
 using namespace std;
 
@@ -83,8 +83,13 @@ int main()
         case 2:
             cout<<"2: Element an beliebiger Stelle einfuegen"<<endl;
             cout<<"Name: ";
+            //cin >> content;
+                    if(y==0)
+                        getchar();
+                    getline(cin, content);
+                    y++;
 // TODO (C.Geitner#1#): Alternative Einlesemethode implementieren
-            cin>>content;
+
             cout<<"Position: ";
             cin>>position;
             myList.insertElement(position, content);
