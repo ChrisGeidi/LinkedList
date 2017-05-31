@@ -12,6 +12,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 #include "linkedList.h"
+#include "stdio.h"
 
 using namespace std;
 
@@ -20,7 +21,7 @@ int main()
     //Erzeugen eines Typs Liste
     //Mit sofortiger initialisierung durch den Custom-Konstrukt
     linkedList myList("");
-    int i=0;
+    int i=0,y=0;
 
     string content;
     int position;
@@ -67,11 +68,15 @@ int main()
                 {
                     cout<<"Name: ";
                     //cin >> content;
+                    if(y==0)
+                        getchar();
                     getline(cin, content);
                     if(content!="!")
                         myList.append(content);
+                    y++;
                 }
                 while(content!="!");
+                y=0;
 
             cout<<endl<<endl;
             break;
