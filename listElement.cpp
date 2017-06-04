@@ -1,3 +1,4 @@
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // File: listElement.cpp
@@ -15,53 +16,78 @@
 #include "listElement.h"
 
 using namespace std;
-listElement::listElement() : listElement("")
+
+template <class T>
+listElement<T>::listElement()
 {
+    //std::cout << "std-Constructor" << std::endl;
+    ;
 }
 
-listElement::listElement(string strContent)
+template <class T>
+listElement<T>::listElement(T content)
 {
-    setContent(strContent);
+    //std::cout << "Custom-Constructor" << std::endl;
+    setContent(content);
     setNextElement(0);
 }
 
-string listElement::getContent()
+template <class T>
+void listElement<T>::setContent(T newContent)
 {
-    return content;
-}
-
-void listElement::setContent(string newContent)
-{
+    //std::cout << "setContent" << std::endl;
     content = newContent;
 }
 
-void listElement::setNextElement(listElement* pNextElement)
+template <class T>
+void listElement<T>::setNextElement(listElement* pNextElement)
 {
+    //std::cout << "setNextElement" << std::endl;
     ptrNextElement = pNextElement;
 }
 
-listElement* listElement::getNextElement()
+
+
+template <class T>
+T listElement<T>::getContent()
 {
+    //std::cout << "getContent" << std::endl;
+    return content;
+}
+
+template <class T>
+listElement<T>* listElement<T>::getNextElement()
+{
+    //std::cout << "getNextElement" << std::endl;
     return ptrNextElement;
 }
 
-void listElement::swapContent(listElement* element)
+template <class T>
+void listElement<T>::swapContent( listElement<T>* element )
 {
-    string tempContent=getContent();
-
+    T tempContent = getContent();
     setContent(element->getContent());
     element->setContent(tempContent);
 }
 
-ostream& operator<< (ostream& os, listElement& element)
-{
-    os << element.getContent();
 
-    return os;
-}
-void listElement::operator= (listElement element)
+
+
+/*
+// TODO (Marc Töpker#1#): Überladen der Operatoren klappt nicht?!
+template <class T>
+void listElement<T>::operator=( listElement<T>* element )
 {
-    content = element.getContent();
+    //std::cout << "operator = " << std::endl;
+    content = element->getContent();
 }
+
+template <class T>
+ostream& operator<< (ostream& os, listElement<T>& element)
+{
+    //std::cout << "operator << " << std::endl;
+    return os << element->getContent();
+}
+*/
 
 //////////////////// End of File <listElement.cpp> ////////////////////////////

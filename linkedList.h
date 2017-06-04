@@ -1,3 +1,4 @@
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // File: linkedList.h
@@ -20,41 +21,31 @@
 #include <stdio.h>
 
 
-class linkedList
+template <class T> class linkedList
 {
 private:
-    //int amountOfElements;
-    listElement* start;
-    listElement* active;
+    listElement<T>* start;      // beginnendes element
+    listElement<T>* active;     // akutelles bzw. zuletzt eingefügtes element
 
-    /* set functions */
-    void setStartElement( listElement* );
-    void setActiveElement ( listElement* );
-
-
-
-
-
+    void setStartElement( listElement<T>* );
+    void setActiveElement ( listElement<T>* );
 public:
-    /* Konstruktoren */
-    linkedList(  );                         //initialize LinkedList
-    linkedList( std::string );              //initialize LinkedList with content
-    //linkedList( linkedList& );               //copyConstructor for LinkedList
-    /* Destruktor */
+    linkedList(  );
+    linkedList( T );
+
     ~linkedList();
-    /* Schnittstellenfkt */
-    void sortList(  );                      // sortierung asc
-    void append( std::string );             // element an das ende der liste anhängen
-    void insertElement( int, std::string ); // element an einer bestimmten position einfügen
-    void deleteElement( int );              // soll ein element an einer stelle löschen
-    void deleteElement( std::string );      // soll ein element mit dem Content löschen
-    /* get functions */
-    listElement* getStartElement (  );
-    listElement* getActiveElement (  );
+
+    void sortList(  );
+    void append( T );
+    void insertElement( int, T );
+    void deleteElement( int );
+
+    listElement<T>* getStartElement (  );
+    listElement<T>* getActiveElement (  );
     int getAmountOfElements();              //Anzahl der Elemente in der Liste ausgeben
     //listElement* getAddressOfElementsNumber(int);   // gibt Adresse eines numerierten Elementes zurück
     /* Überladungsfkt */
-    friend std::ostream& operator<< (std::ostream& os,  linkedList& liste);
+    friend std::ostream& operator<< (std::ostream& os,  listElement<T>& liste);
 };
 
 #endif // linkedList_H

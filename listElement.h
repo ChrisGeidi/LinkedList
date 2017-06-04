@@ -17,25 +17,27 @@
 #ifndef LISTELEMENT_H
 #define LISTELEMENT_H
 
-#include <string>
 #include <iostream>
 
-class listElement
+
+template <class T> class listElement
 {
-    std::string content;
+    T content;
     listElement* ptrNextElement;
 
 public:
-    listElement();
-    listElement(std::string);
-    void operator= (listElement);
-    void swapContent (listElement*);
-    friend std::ostream& operator<< (std::ostream& os,  listElement& element);
-    void setContent(std::string);
-    std::string getContent();
-    void setNextElement(listElement*);
-    listElement* getNextElement();
-    //listElement* getAddressOfNumber(unsigned int);
+    listElement(  );
+    listElement( T );
+    void setContent( T );
+    void setNextElement( listElement* );
+
+    T getContent(  );
+    listElement* getNextElement(  );
+
+    void operator= ( listElement* );
+    friend std::ostream& operator<< ( std::ostream& os, listElement<T>& element);
+
+    void swapContent( listElement<T>* );
 };
 
 #endif // LISTELEMENT_H
