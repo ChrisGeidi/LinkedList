@@ -24,6 +24,7 @@
 template <class T> class linkedList
 {
 private:
+    int length;                 // length of list
     listElement<T>* start;      // beginnendes element
     listElement<T>* active;     // akutelles bzw. zuletzt eingefügtes element
 
@@ -39,10 +40,13 @@ public:
     void append( T );
     void insertElement( int, T );
     void deleteElement( int );
+    void deleteElement( T );
+    void printList (  );
 
     listElement<T>* getStartElement (  );
     listElement<T>* getActiveElement (  );
-    int getAmountOfElements();              //Anzahl der Elemente in der Liste ausgeben
+
+    int getLength();
     //listElement* getAddressOfElementsNumber(int);   // gibt Adresse eines numerierten Elementes zurück
     /* Überladungsfkt */
     friend std::ostream& operator<< (std::ostream& os,  listElement<T>& liste);
