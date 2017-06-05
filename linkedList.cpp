@@ -213,9 +213,10 @@ void linkedList<T>::printList(  )
     //        << endl;
 
     cout    << "\t"
-            << "Nr.: \t"
-            << "Adresse: \t"
-            << "Inhalt: \t"
+            << "Nr.:\t"
+            << "Inhalt:\t\t"
+            << "Adresse:\t"
+            << "Next:\t"
             << endl;
 
     element = getStartElement();
@@ -223,8 +224,9 @@ void linkedList<T>::printList(  )
     {
         i++;
        cout << "\t"     << i
-            << "\t"     << element
-            << "\t"     << element->getContent()
+            << "\t"   << element->getContent()
+            << "\t\t"     << element
+            << "\t"     << element->getNextElement()
             << endl;
 
         element = element->getNextElement();
