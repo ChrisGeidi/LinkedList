@@ -1,0 +1,30 @@
+	Todo für LinkedList
+	
+	Allgemein:
+		alles mit dynamischen Speicher
+		10% der Prüfungsleistung
+		+ 5% für generische Datentypen
+		
+	
+	ListElement:
+		content
+		<< operator
+		= operator
+	
+	LinkedList
+		Kopier konstuktor
+		<< "output"
+		sort()
+		append()
+		insert()
+		swap()
+		delete()
+		
+	TestApp
+		linkedList li1
+		linkedList li2(li1)
+		erzeugt eine belibiege liste
+		interaktiv
+		mindestens ausgabe der sortierten liste
+		
+
