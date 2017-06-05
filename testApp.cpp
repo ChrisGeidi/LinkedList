@@ -64,7 +64,8 @@ int main()
     // TODO (Marc Töpker#1#): Muss für Templateklasse noch angepasst werden, funktioniert nur mit strings ...
     cout << "sort elements in list" << endl;
     myList->sortList();
-    myList->printList();
+    cout<< myList<< endl;
+    cout<< myList<< endl;
     cout << endl;
 
     delete myList;

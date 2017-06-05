@@ -305,6 +305,35 @@ void linkedList<T>::removeElement( T content )
     }
 }
 
+template <class T>
+ostream&operator <<(ostream& os, linkedList<T>& liste)
+{
+    int i=0;
+    cout    << "\t"
+            << "Nr.: \t"
+            << "Adresse: \t"
+            << "Inhalt: \t"
+            << endl;
+    // Erstes listElement holen
+    listElement<T>* element = liste.getStartElement();
+
+    // ELemente der reihe nach ausgaben
+    while(element != 0)
+    {
+        i++;
+       os   << "\t" << i<< "\t"<< element<<"\t"<< element->getContent() << endl;
+
+
+
+        // Ausgabe des Aktuellen Elements
+        //os << i << ": \t" << element->getContent() << endl;
+        // nächstes Element holen/setzen
+        element = element->getNextElement();
+
+    }
+
+  return os ;
+}
 
 /////////////////// End of File <linkedList.cpp> //////////////////////////////
 
