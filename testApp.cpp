@@ -11,25 +11,25 @@ int main()
 {
     // vars
     ///*string list*/
-    linkedList<string>* myList = new linkedList<string>;    //für string lists
+    /*linkedList<string>* myList = new linkedList<string>;    //für string lists
     string  Test1 = "Jens";
     string  Test2 = "Christoph";
     string  Test3 = "Carsten";
-    string  Test4 = "Marc";
+    string  Test4 = "Marc";*/
 
     ///*integer list*/
-    //linkedList<int>* myList = new linkedList<int>;          // für int lists
-    //int     Test1 = 168;
-    //int     Test2 = 152;
-    //int     Test3 = 348;
-    //int     Test4 = 111;
+    /*linkedList<int>* myList = new linkedList<int>;          // für int lists
+    int     Test1 = 500;
+    int     Test2 = 152;
+    int     Test3 = 348;
+    int     Test4 = 111;*/
 
     ///*double list*/
-    //linkedList<double>* myList = new linkedList<double>;          // für double lists
-    //double     Test1 = 168;
-    //double     Test2 = 152;
-    //double     Test3 = 348;
-    //double     Test4 = 111;
+    linkedList<double>* myList = new linkedList<double>;          // für double lists
+    double     Test1 = 768.55;
+    double     Test2 = 152.62;
+    double     Test3 = 348.24;
+    double     Test4 = 111.36;
 
 
 
@@ -57,7 +57,7 @@ int main()
 
     // delete element with given content
     cout << "delete element where content like '"<<Test2<<"'" << endl;
-    myList->deleteElement(Test2);
+    myList->removeElement(Test2);
     myList->printList();
     cout << endl;
 

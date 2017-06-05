@@ -15,6 +15,8 @@
 #include "listElement.cpp"
 #include "linkedList.h"
 #include <iostream>
+#include <string>
+#include <sstream>
 
 using namespace std;
 template <class T>
@@ -146,6 +148,14 @@ int linkedList<T>::getLength(  )
 // TODO (C.Geitner#1#): Lower- / Uppercase ignorieren
 // TODO (Marc Töpker#1#): Muss für Templateklasse noch angepasst werden, funktioniert nur mit strings ...
 //
+template <typename T>
+string linkedList<T>::to_string(T const& value)
+{
+    stringstream sstr;
+    sstr << value;
+    return sstr.str();
+}
+
 template <class T>
 void linkedList<T>::sortList(  )
 {
@@ -161,11 +171,13 @@ void linkedList<T>::sortList(  )
         while(element2 != 0)
         {
             int j = 0;
-            T strContent1 = element1->getContent();
-            T strContent2 = element2->getContent();
+
+            string strContent1 = to_string(element1->getContent());
+            string strContent2 = to_string(element2->getContent());
 
             // Den naechsten Buchstaben pruefen, falls bei beiden strings
             // identisch
+
             while(strContent1[j] == strContent2[j])
             {
                 j++;
@@ -178,6 +190,7 @@ void linkedList<T>::sortList(  )
             {
                 element1->swapContent(element2);
             }
+
 
             // Mit den folgenden Elementen fortfahren
             element1 = element2;
@@ -257,7 +270,7 @@ void linkedList<T>::deleteElement( int pos )
 }
 
 template <class T>
-void linkedList<T>::deleteElement( T content )
+void linkedList<T>::removeElement( T content )
 {
     int i=0;
     // Erstes listElement holen

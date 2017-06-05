@@ -35,7 +35,7 @@ public:
     listElement* getNextElement(  );
 
     void operator= ( listElement* );
-    friend std::ostream& operator<< ( std::ostream& os, listElement<T>& element);
+    friend std::ostream& operator<<( std::ostream& os, listElement<T>& element);
 
     void swapContent( listElement<T>* );
 };

@@ -40,8 +40,10 @@ public:
     void append( T );
     void insertElement( int, T );
     void deleteElement( int );
-    void deleteElement( T );
+    void removeElement( T );
     void printList (  );
+
+    string to_string(T const& value);
 
     listElement<T>* getStartElement (  );
     listElement<T>* getActiveElement (  );
@@ -49,7 +51,7 @@ public:
     int getLength();
     //listElement* getAddressOfElementsNumber(int);   // gibt Adresse eines numerierten Elementes zurück
     /* Überladungsfkt */
-    friend std::ostream& operator<< (std::ostream& os,  listElement<T>& liste);
+    friend std::ostream& operator<<(std::ostream& os,  listElement<T>& liste);
 };
 
 #endif // linkedList_H

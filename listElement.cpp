@@ -87,7 +87,7 @@ ostream& operator<< (ostream& os, listElement<T>& element)
 {
     //std::cout << "operator << " << std::endl;
     return os << element->getContent();
-}
-*/
+}*/
+
 
 //////////////////// End of File <listElement.cpp> ////////////////////////////
