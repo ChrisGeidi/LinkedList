@@ -205,13 +205,6 @@ void linkedList<T>::printList(  )
     int                 i = 0;
     listElement<T>*     element;
 
-    // print listts
-    //cout    << "Ausgabe Liste: "
-    //        << length
-    //        << " Elemente"
-    //        << endl
-    //        << endl;
-
     cout    << "\t"
             << "Nr.:\t"
             << "Inhalt:\t\t"
@@ -224,8 +217,8 @@ void linkedList<T>::printList(  )
     {
         i++;
        cout << "\t"     << i
-            << "\t"   << element->getContent()
-            << "\t\t"     << element
+            << "\t"     << element->getContent()
+            << "\t\t"   << element
             << "\t"     << element->getNextElement()
             << endl;
 
@@ -309,11 +302,12 @@ template <class T>
 ostream&operator <<(ostream& os, linkedList<T>& liste)
 {
     int i=0;
-    cout    << "\t"
-            << "Nr.: \t"
-            << "Adresse: \t"
-            << "Inhalt: \t"
-            << endl;
+    os  << "\t"
+        << "Nr.:\t"
+        << "Inhalt:\t\t"
+        << "Adresse:\t"
+        << "Next:\t"
+        << endl;
     // Erstes listElement holen
     listElement<T>* element = liste.getStartElement();
 
@@ -321,8 +315,11 @@ ostream&operator <<(ostream& os, linkedList<T>& liste)
     while(element != 0)
     {
         i++;
-       os   << "\t" << i<< "\t"<< element<<"\t"<< element->getContent() << endl;
-
+       os   << "\t"     << i
+            << "\t"     << element->getContent()
+            << "\t\t"   << element
+            << "\t"     << element->getNextElement()
+            << endl;
 
 
         // Ausgabe des Aktuellen Elements
