@@ -37,6 +37,42 @@ linkedList<T>::linkedList( T content )
 }
 
 template <class T>
+linkedList<T>::linkedList(linkedList& source)
+{
+    std::cout << "COPY-Constructor" << std::endl;
+    length = source.length;
+    //setStartElement(source->getStartElement());
+    //setActiveElement(source->getActiveElement());
+
+    listElement<T>* newElement = new listElement<T>(source->getStartElement());
+
+    setStartElement(newElement);
+    setActiveElement(newElement);
+
+     // Erstes listElement holen
+    int i=0;
+    listElement<T>* actualElement = source->getStartElement();
+    listElement<T>* nextElement;
+    // ELemente e
+    while(actualElement != 0)
+    {
+        nextElement = actualElement->getNextElement();
+
+        listElement<T>* newElement = new listElement<T>(actualElement);
+        getActiveElement()->setNextElement(newElement);
+        setActiveElement(newElement);
+
+        actualElement = nextElement;
+        i++;
+    }
+    cout    << "Copy-Constructor: "
+            << i
+            << " elements copied!"
+            << endl;
+
+}
+
+template <class T>
 linkedList<T>::~linkedList(  )
 {
     // Erstes listElement holen

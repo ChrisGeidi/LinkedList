@@ -33,6 +33,14 @@ listElement<T>::listElement(T content)
 }
 
 template <class T>
+listElement<T>::listElement(listElement& source)
+{
+    std:cout << "Copy-Constructor" << std::endl;
+    setContent(source->getContent());
+    setNextElement(source->getNextElement());
+}
+
+template <class T>
 void listElement<T>::setContent(T newContent)
 {
     //std::cout << "setContent" << std::endl;

@@ -33,6 +33,7 @@ template <class T> class listElement
 public:
     listElement(  );
     listElement( T );
+    listElement( listElement& );
     void setContent( T );
     void setNextElement( listElement* );
 

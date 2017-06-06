@@ -38,6 +38,7 @@ private:
 public:
     linkedList(  );
     linkedList( T );
+    linkedList( linkedList& );
 
     ~linkedList();
 

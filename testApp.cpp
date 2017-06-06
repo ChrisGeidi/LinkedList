@@ -69,7 +69,16 @@ int main()
     cout<< (*myList) << endl;
     cout << endl;
 
+    cout << endl << endl << "----------------- TEST OF COPY-CONSTRUKTOR --------------------" << endl << endl;
+
+    linkedList<double>* myNewList(myList);
+
     delete myList;
+
+    // append elements to list
+    cout << "Last output should be same as next output" << endl;
+    myNewList->printList();
+    cout << endl;
 
     return 0;
 }
