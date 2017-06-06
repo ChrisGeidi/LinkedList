@@ -26,7 +26,7 @@ int main()
     ///*double list*/
     // TODO (Marc Töpker#2#): Muss die linkedList selber auch dynamisch erzeugt werden?
     //linkedList<double>* myList = new linkedList<double>;
-    linkedList<double> myList;
+    linkedList<double>* myList = new linkedList<double>;
     double     Test1 = 768.55;
     double     Test2 = 152.62;
     double     Test3 = 348.24;
@@ -38,38 +38,38 @@ int main()
 
     // append elements to list
     cout << "append 3 Elements to list and print" << endl;
-    myList.append(Test1);
-    myList.append(Test2);
-    myList.append(Test3);
-    myList.printList();
+    myList->append(Test1);
+    myList->append(Test2);
+    myList->append(Test3);
+    myList->printList();
     cout << endl;
 
     // insert to fixed pos in list
     cout << "insert '"<<Test4<<"' to pos 3 in list" << endl;
-    myList.insertElement(2,Test4);
-    myList.printList();
+    myList->insertElement(2,Test4);
+    myList->printList();
     cout << endl;
 
     // delete element from fixed pos
     cout << "delete element from pos 3" << endl;
-    myList.deleteElement(2);
-    myList.printList();
+    myList->deleteElement(2);
+    myList->printList();
     cout << endl;
 
     // delete element with given content
     cout << "delete element where content like '"<<Test2<<"'" << endl;
-    myList.removeElement(Test2);
-    myList.printList();
+    myList->removeElement(Test2);
+    myList->printList();
     cout << endl;
 
     // sort elements in list
     // TODO (Marc Töpker#1#): Muss für Templateklasse noch angepasst werden, funktioniert nur mit strings ...
     cout << "sort elements in list" << endl;
-    myList.sortList();
-    cout<< myList << endl;
+    myList->sortList();
+    cout<< (*myList) << endl;
     cout << endl;
 
-    //delete myList;
+    delete myList;
 
     return 0;
 }
