@@ -117,12 +117,10 @@ void linkedList<T>::insertElement(int pos, T content)
     listElement<T>* newElement = new listElement<T>(content);
     listElement<T>* actualElement = getStartElement();
     listElement<T>* lastElement = actualElement;
-    listElement<T>* nextElement = actualElement;
 
     // ELemente e
     while(actualElement != 0)
     {
-        nextElement = actualElement->getNextElement();
         if ( pos==i )
         {
             if(pos == 0)

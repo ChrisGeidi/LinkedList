@@ -24,7 +24,6 @@ int main()
     int     Test4 = 111;*/
 
     ///*double list*/
-    // TODO (Marc Töpker#2#): Muss die linkedList selber auch dynamisch erzeugt werden?
     //linkedList<double>* myList = new linkedList<double>;
     linkedList<double>* myList = new linkedList<double>;
     double     Test1 = 768.55;
