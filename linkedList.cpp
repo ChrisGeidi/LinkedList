@@ -334,7 +334,7 @@ void linkedList<T>::removeElement( T content )
 }
 
 template <class T>
-ostream&operator <<(ostream& os, linkedList<T>& liste)
+ostream&operator <<(ostream& os, linkedList<T>* liste)
 {
     int i=0;
     os  << "\t"
@@ -344,7 +344,7 @@ ostream&operator <<(ostream& os, linkedList<T>& liste)
         << "Next:\t"
         << endl;
     // Erstes listElement holen
-    listElement<T>* element = liste.getStartElement();
+    listElement<T>* element = liste->getStartElement();
 
     // ELemente der reihe nach ausgaben
     while(element != 0)

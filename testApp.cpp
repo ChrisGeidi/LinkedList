@@ -63,10 +63,9 @@ int main()
     cout << endl;
 
     // sort elements in list
-    // TODO (Marc Töpker#1#): Muss für Templateklasse noch angepasst werden, funktioniert nur mit strings ...
     cout << "sort elements in list" << endl;
     myList->sortList();
-    cout<< (*myList) << endl;
+    cout << myList << endl;
     cout << endl;
 
     cout << endl << endl << "----------------- TEST OF COPY-CONSTRUKTOR --------------------" << endl << endl;
