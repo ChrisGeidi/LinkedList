@@ -182,8 +182,7 @@ int linkedList<T>::getLength(  )
 
 
 // TODO (C.Geitner#1#): Lower- / Uppercase ignorieren
-// TODO (Marc Töpker#1#): Muss für Templateklasse noch angepasst werden, funktioniert nur mit strings ...
-//
+
 template <typename T>
 string linkedList<T>::to_string(T const& value)
 {

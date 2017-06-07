@@ -78,11 +78,6 @@ void listElement<T>::swapContent( listElement<T>* element )
     element->setContent(tempContent);
 }
 
-
-
-
-
-// TODO (Marc Töpker#1#): Überladen der Operatoren klappt nicht?!
 template <class T>
 void listElement<T>::operator=( listElement<T>* element )
 {
