@@ -348,7 +348,7 @@ ostream&operator <<(ostream& os, linkedList<T>* liste)
     while(element != 0)
     {
         i++;
-       os   << "\t"     << i
+        os  << "\t"     << i
             << "\t"     << element->getContent()
             << "\t\t"   << element
             << "\t"     << element->getNextElement()

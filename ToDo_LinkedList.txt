@@ -8,8 +8,8 @@
 	
 	ListElement:
 		content
-		<< operator
-		= operator
+		<< operator wird nicht genutzt - Anwendung in <<-Operator für linkedList denkbar
+		= operator - könnte in Kopier-Konstruktor genutzt werden?
 	
 	LinkedList
 		Kopier konstuktor
