@@ -40,26 +40,22 @@ int main()
     myList->append(Test1);
     myList->append(Test2);
     myList->append(Test3);
-    myList->printList();
-    cout << endl;
+    cout << myList << endl;
 
     // insert to fixed pos in list
     cout << "insert '"<<Test4<<"' to pos 3 in list" << endl;
     myList->insertElement(2,Test4);
-    myList->printList();
-    cout << endl;
+    cout << myList << endl;
 
     // delete element from fixed pos
     cout << "delete element from pos 3" << endl;
     myList->deleteElement(2);
-    myList->printList();
-    cout << endl;
+    cout << myList << endl;
 
     // delete element with given content
     cout << "delete element where content like '"<<Test2<<"'" << endl;
     myList->removeElement(Test2);
-    myList->printList();
-    cout << endl;
+    cout << myList << endl;
 
     // sort elements in list
     cout << "sort elements in list" << endl;
@@ -75,8 +71,7 @@ int main()
 
     // append elements to list
     cout << "Last output should be same as next output" << endl;
-    myNewList->printList();
-    cout << endl;
+    cout << myList << endl;
 
     return 0;
 }

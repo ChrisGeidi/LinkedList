@@ -24,7 +24,7 @@ template <class T>
 class linkedList;
 
 template <class T>
-std::ostream& operator<<(std::ostream& os,  listElement<T>& liste);
+std::ostream& operator<<(std::ostream& os,  linkedList<T>& liste);
 
 template <class T> class linkedList
 {
@@ -47,7 +47,7 @@ public:
     void insertElement( int, T );
     void deleteElement( int );
     void removeElement( T );
-    void printList (  );
+    //void printList (  );
 
     string to_string(T const& value);
 
@@ -57,7 +57,7 @@ public:
     int getLength();
     //listElement* getAddressOfElementsNumber(int);   // gibt Adresse eines numerierten Elementes zurück
     /* Überladungsfkt */
-    friend std::ostream& operator<< <>(std::ostream& os,  listElement<T>& liste);
+    //friend std::ostream& operator<< <>(std::ostream& os,  listElement<T>& liste);
 };
 
 #endif // linkedList_H

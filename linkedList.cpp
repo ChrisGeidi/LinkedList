@@ -232,7 +232,7 @@ void linkedList<T>::sortList(  )
     }//endfor
 }
 
-template <class T>
+/*template <class T>
 void linkedList<T>::printList(  )
 {
     int                 i = 0;
@@ -260,7 +260,7 @@ void linkedList<T>::printList(  )
     cout    << endl;
 
 
-}
+}*/
 
 template <class T>
 void linkedList<T>::deleteElement( int pos )
