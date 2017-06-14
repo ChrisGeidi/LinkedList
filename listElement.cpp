@@ -1,4 +1,3 @@
-
 ///////////////////////////////////////////////////////////////////////////////
 //
 // File: listElement.cpp
@@ -21,7 +20,6 @@ template <class T>
 listElement<T>::listElement()
 {
     //std::cout << "std-Constructor" << std::endl;
-    ;
 }
 
 template <class T>
@@ -43,14 +41,12 @@ listElement<T>::listElement(listElement& source)
 template <class T>
 void listElement<T>::setContent(T newContent)
 {
-    //std::cout << "setContent" << std::endl;
     content = newContent;
 }
 
 template <class T>
 void listElement<T>::setNextElement(listElement* pNextElement)
 {
-    //std::cout << "setNextElement" << std::endl;
     ptrNextElement = pNextElement;
 }
 
@@ -59,14 +55,12 @@ void listElement<T>::setNextElement(listElement* pNextElement)
 template <class T>
 T listElement<T>::getContent()
 {
-    //std::cout << "getContent" << std::endl;
     return content;
 }
 
 template <class T>
 listElement<T>* listElement<T>::getNextElement()
 {
-    //std::cout << "getNextElement" << std::endl;
     return ptrNextElement;
 }
 
@@ -81,14 +75,12 @@ void listElement<T>::swapContent( listElement<T>* element )
 template <class T>
 void listElement<T>::operator=( listElement<T>* element )
 {
-    //std::cout << "operator = " << std::endl;
     content = element->getContent();
 }
 
 template <class T>
 ostream& operator<< (ostream& os, listElement<T>& element)
 {
-    //std::cout << "operator << " << std::endl;
     return os << element->getContent();
 }
 
