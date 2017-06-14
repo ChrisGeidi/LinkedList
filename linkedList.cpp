@@ -79,7 +79,6 @@ linkedList<T>::~linkedList(  )
     int i=0;
     listElement<T>* actualElement = getStartElement();
     listElement<T>* nextElement;
-    // ELemente e
     while(actualElement != 0)
     {
         nextElement = actualElement->getNextElement();
@@ -118,7 +117,6 @@ void linkedList<T>::insertElement(int pos, T content)
     listElement<T>* actualElement = getStartElement();
     listElement<T>* lastElement = actualElement;
 
-    // ELemente e
     while(actualElement != 0)
     {
         if ( pos==i )
@@ -138,15 +136,13 @@ void linkedList<T>::insertElement(int pos, T content)
         actualElement = actualElement->getNextElement();
         i++;
     }
-    // if  position higher then length of LinkedList append
+    // if position is higher than length of LinkedList: append
     if (pos>=i)
     {
         lastElement->setNextElement(newElement);
     }
     length ++;
 }
-
-
 
 template <class T>
 void linkedList<T>::setActiveElement( listElement<T>* pListElement )
@@ -178,21 +174,18 @@ int linkedList<T>::getLength(  )
     return length;
 }
 
-
-// TODO (C.Geitner#1#): Lower- / Uppercase ignorieren
-
 template <typename T>
 string linkedList<T>::to_string(T const& value)
 {
     stringstream sstr;
     sstr << value;
+
     return sstr.str();
 }
 
 template <class T>
 void linkedList<T>::sortList(  )
 {
-    // Bubblesort-Algorithmus
     for(int i = 1; i <= length; i++)
     {
         // Erstes listElement holen
@@ -217,13 +210,12 @@ void linkedList<T>::sortList(  )
             }
 
             // Strings der Elemente vertauschen, falls ASCII-Wert der
-            // entsprechenden Stelle des ersten Elementes groeßer als der
+            // entsprechenden Stelle des ersten Elementes groesser als der
             // des zweiten Elementes ist
             if(int(strContent1[j]) > int(strContent2[j]))
             {
                 element1->swapContent(element2);
             }
-
 
             // Mit den folgenden Elementen fortfahren
             element1 = element2;
